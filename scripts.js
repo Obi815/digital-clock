@@ -1,23 +1,31 @@
-function currentTime() {
-    // Defining a function called "currentTime" //
-
-    // storing variable "date" //
+function Time() {
+    // Creating object of the Date Class //
     let date = new Date();
 
-    // extracting hours, minutes, seconds from variable date //
-    // hrs, min, sec are stored in variable "date" // 
+    // Getting the current hour //
     let hrs = date.getHours();
+    // Minutes //
     let min = date.getMinutes();
+    // Seconds //
     let sec = date.getSeconds();
-    
-    // creating a variable to store AM //
-    let session = "AM"
 
-    if(hrs == 0) {
+    // Variable to store AM / PM //
+    let period = "";
+
+    // Logic to find AM / PM
+    if (hrs >= 12) {
+        period = "PM"; 
+    } else {
+        period = "AM";
+    }
+
+    // Converting into 12 hour clock // 
+    if (hrs == 0) {
         hrs = 12;
+    } else {
+        if (hrs > 12) {
+            hrs = hour - 12; 
+        }
     }
-    if(hrs > 12) {
-        hrs = hrs - 12;
-        session = "PM"
-    }
+
 }
