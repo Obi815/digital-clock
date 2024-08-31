@@ -24,8 +24,15 @@ function Time() {
         hrs = 12;
     } else {
         if (hrs > 12) {
-            hrs = hour - 12; 
+            hrs = hrs - 12; 
         }
     }
+    //updating hours, minutes, seconds //
+    hrs = update(hrs);
+    min = update(min);
+    sec = update(sec);
+
+    // Adding elements to the div in the html //
+    document.getElementById("digital-clock").innerText = hrs + " : " + min + " : " + sec + "  " + period;
 
 }
