@@ -35,4 +35,17 @@ function Time() {
     // Adding elements to the div in the html //
     document.getElementById("digital-clock").innerText = hrs + " : " + min + " : " + sec + "  " + period;
 
+    // Set timer to 1 sec //
+    setTimeout(Time, 1000);
 }
+
+// A Function to update time elements if they are less than 10 //
+// Append 0 before time elements if they are less than 10 //
+function update(t) {
+    if (t < 10) {
+        return "0" + t;
+    } else {
+        return t; 
+    }
+}
+Time();
