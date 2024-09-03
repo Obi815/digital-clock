@@ -34,6 +34,7 @@ function Time() {
 
     // Adding elements to the div in the html //
     document.getElementById("digital-clock").innerText = hrs + " : " + min + " : " + sec + "  " + period;
+   
 
     // Set timer to 1 sec //
     setTimeout(Time, 1000);
